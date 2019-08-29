@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A3230A30"
+    android:background="@drawable/madLibsPattern"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,7 +13,8 @@
         android:layout_marginTop="8dp"
         android:text="Pick words according to description, then press the button"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/colorText"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
