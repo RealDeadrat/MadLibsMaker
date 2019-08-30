@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/madLibsPattern"
+    android:background="@drawable/madlibspattern"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Pick words according to description, then press the button"
+        android:hint="A Color"
+        android:background="@drawable/custom"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/colorText"/>
+        android:textColorHint="@color/colorText"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
