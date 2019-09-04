@@ -11,12 +11,12 @@
         android:id="@+id/noun"
         android:layout_width="100dp"
         android:layout_height="43dp"
-        android:layout_marginStart="@dimen/paddingEdTxt"
+        android:layout_marginStart="@dimen/paddingEdTxt1"
         android:layout_marginTop="140dp"
         android:background="@drawable/custom"
         android:gravity="center"
         android:hint="A Color"
-        android:textColorHint="@color/colorText"
+        android:textColorHint="@color/colorHntText"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,12 +24,12 @@
     <EditText
         android:layout_width="100dp"
         android:layout_height="43dp"
-        android:layout_marginStart="@dimen/paddingEdTxt"
+        android:layout_marginStart="@dimen/paddingEdTxt1"
         android:layout_marginTop="56dp"
         android:background="@drawable/custom"
         android:gravity="center"
         android:hint="A Color"
-        android:textColorHint="@color/colorText"
+        android:textColorHint="@color/colorHntText"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -42,7 +42,7 @@
         android:background="@drawable/custom"
         android:gravity="center"
         android:hint="A Color"
-        android:textColorHint="@color/colorText"
+        android:textColorHint="@color/colorHntText"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -50,12 +50,12 @@
     <EditText
         android:layout_width="100dp"
         android:layout_height="43dp"
-        android:layout_marginStart="@dimen/paddingEdTxt"
+        android:layout_marginStart="@dimen/paddingEdTxt1"
         android:layout_marginTop="220dp"
         android:background="@drawable/custom"
         android:gravity="center"
         android:hint="A Color"
-        android:textColorHint="@color/colorText"
+        android:textColorHint="@color/colorHntText"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -68,7 +68,7 @@
         android:background="@drawable/custom"
         android:gravity="center"
         android:hint="A Color"
-        android:textColorHint="@color/colorText"
+        android:textColorHint="@color/colorHntText"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
