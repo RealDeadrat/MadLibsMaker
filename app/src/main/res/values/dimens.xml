@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="paddingEdTxt1" >72dp</dimen>
-    <dimen name="paddingEdTxt2" >220dp</dimen>
+    <dimen name="marginHorz" >72dp</dimen>
+    <dimen name="marginTopEdTxt" >43dp</dimen>
+    <dimen name="marginVert" >60dp</dimen>
+    <dimen name="btnMarginBtm" >100dp</dimen>
+    <dimen name="btnWidth" >100dp</dimen>
+    <dimen name="btnheight" >50dp</dimen>
 </resources>

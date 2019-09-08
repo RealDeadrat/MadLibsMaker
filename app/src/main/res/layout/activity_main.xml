@@ -11,68 +11,152 @@
         android:id="@+id/noun"
         android:layout_width="100dp"
         android:layout_height="43dp"
-        android:layout_marginStart="@dimen/paddingEdTxt1"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="@dimen/marginTopEdTxt"
         android:background="@drawable/custom"
         android:gravity="center"
-        android:hint="A Color"
+        android:hint="Noun"
+        android:textColor="@color/colorText"
         android:textColorHint="@color/colorHntText"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/leftOrgEdTxt"
+        app:layout_constraintStart_toStartOf="@+id/leftOrgEdTxt"
+        app:layout_constraintTop_toBottomOf="@+id/leftOrgEdTxt" />
+
+    <EditText
+        android:id="@+id/leftOrgEdTxt"
+        android:layout_width="100dp"
+        android:layout_height="43dp"
+        android:layout_marginLeft="@dimen/marginHorz"
+        android:background="@drawable/custom"
+        android:gravity="center"
+        android:hint="Adverb"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorHntText"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rightOrgEdTxt" />
+
+    <EditText
+        android:id="@+id/rightOrgEdTxt"
+        android:layout_width="100dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="@dimen/marginVert"
+        android:layout_marginRight="@dimen/marginHorz"
+        android:background="@drawable/custom"
+        android:gravity="center"
+        android:hint="Adjective"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorHntText"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:id="@+id/adjective2"
         android:layout_width="100dp"
         android:layout_height="43dp"
-        android:layout_marginStart="@dimen/paddingEdTxt1"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="@dimen/marginTopEdTxt"
         android:background="@drawable/custom"
         android:gravity="center"
-        android:hint="A Color"
+        android:hint="Adjective"
+        android:textColor="@color/colorText"
         android:textColorHint="@color/colorHntText"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/noun"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/noun"
+        app:layout_constraintTop_toBottomOf="@+id/noun" />
 
     <EditText
+        android:id="@+id/place"
         android:layout_width="100dp"
         android:layout_height="43dp"
-        android:layout_marginStart="@dimen/paddingEdTxt2"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="@dimen/marginTopEdTxt"
         android:background="@drawable/custom"
         android:gravity="center"
-        android:hint="A Color"
+        android:hint="Place"
+        android:textColor="@color/colorText"
         android:textColorHint="@color/colorHntText"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/rightOrgEdTxt"
+        app:layout_constraintStart_toStartOf="@+id/rightOrgEdTxt"
+        app:layout_constraintTop_toBottomOf="@+id/rightOrgEdTxt" />
 
     <EditText
+        android:id="@+id/verb"
         android:layout_width="100dp"
         android:layout_height="43dp"
-        android:layout_marginStart="@dimen/paddingEdTxt1"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="@dimen/marginTopEdTxt"
         android:background="@drawable/custom"
         android:gravity="center"
-        android:hint="A Color"
+        android:hint="Verb"
+        android:textColor="@color/colorText"
         android:textColorHint="@color/colorHntText"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/adjective2"
+        app:layout_constraintStart_toStartOf="@+id/adjective2"
+        app:layout_constraintTop_toBottomOf="@+id/adjective2" />
 
     <EditText
+        android:id="@+id/object"
         android:layout_width="100dp"
         android:layout_height="43dp"
-        android:layout_marginStart="@dimen/paddingEdTxt2"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="@dimen/marginTopEdTxt"
         android:background="@drawable/custom"
         android:gravity="center"
-        android:hint="A Color"
+        android:hint="Object"
+        android:textColor="@color/colorText"
         android:textColorHint="@color/colorHntText"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/place"
+        app:layout_constraintStart_toStartOf="@+id/place"
+        app:layout_constraintTop_toBottomOf="@+id/place" />
 
+    <EditText
+        android:id="@+id/number"
+        android:layout_width="100dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="@dimen/marginTopEdTxt"
+        android:background="@drawable/custom"
+        android:gravity="center"
+        android:hint="Number"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorHntText"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="100dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="@dimen/marginTopEdTxt"
+        android:background="@drawable/custom"
+        android:gravity="center"
+        android:hint="Name"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorHntText"
+        app:layout_constraintEnd_toEndOf="@+id/object"
+        app:layout_constraintStart_toStartOf="@+id/object"
+        app:layout_constraintTop_toBottomOf="@+id/object" />
+
+    <EditText
+        android:id="@+id/verb2"
+        android:layout_width="100dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="@dimen/marginTopEdTxt"
+        android:background="@drawable/custom"
+        android:gravity="center"
+        android:hint="Verb"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorHntText"
+        app:layout_constraintEnd_toEndOf="@+id/verb"
+        app:layout_constraintStart_toStartOf="@+id/verb"
+        app:layout_constraintTop_toBottomOf="@+id/verb" />
+
+    <Button
+        android:layout_width="@dimen/btnWidth"
+        android:layout_height="@dimen/btnheight"
+        android:background="@drawable/button"
+        android:text="See Mad Lib"
+        android:textColor="@color/colorText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/btnMarginBtm"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
