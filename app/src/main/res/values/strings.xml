@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MadLibsMaker</string>
+    <string name="chooser">Choose an app to send your Mad Lib</string>
 </resources>

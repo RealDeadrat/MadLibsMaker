@@ -126,6 +126,83 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void shareLib(View v)
+    {
+        EditText noun = (EditText) findViewById(R.id.noun);
+        EditText adverb = (EditText) findViewById(R.id.leftOrgEdTxt);
+        EditText adjective = (EditText) findViewById(R.id.rightOrgEdTxt);
+        EditText adjective2 = (EditText) findViewById(R.id.adjective2);
+        EditText place = (EditText) findViewById(R.id.place);
+        EditText verb = (EditText) findViewById(R.id.verb);
+        EditText object = (EditText) findViewById(R.id.object);
+        EditText number = (EditText) findViewById(R.id.number);
+        EditText name = (EditText) findViewById(R.id.name);
+        EditText verb2 = (EditText) findViewById(R.id.verb2);
+
+        String nounStr = noun.getText().toString();
+        String adverbStr = adverb.getText().toString();
+        String adjectiveStr = adjective.getText().toString();
+        String adjective2Str = adjective2.getText().toString();
+        String placeStr = place.getText().toString();
+        String verbStr = verb.getText().toString();
+        String objectStr = object.getText().toString();
+        String numberStr = number.getText().toString();
+        String nameStr = name.getText().toString();
+        String verb2Str = verb2.getText().toString();
+
+        //here toast pop ups are used to avoid blank mad libs
+        //source: https://developer.android.com/guide/topics/ui/notifiers/toasts
+        if(nounStr.length()==0 || adverbStr.length()==0 || adjectiveStr.length()==0 || adjective2Str.length()==0
+                || placeStr.length()==0 || verbStr.length()==0|| objectStr.length()==0 || numberStr.length()==0 || nameStr.length()==0
+                || verb2Str.length()==0)
+        {
+            Context context = getApplicationContext();
+            CharSequence text = "One of the text boxes are blank, please fill them in";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
+        else if(nounStr.contains(" ") || adverbStr.contains(" ") || adjectiveStr.contains(" ") || adjective2Str.contains(" ")
+                || placeStr.contains(" ") || verbStr.contains(" ") || objectStr.contains(" ") || numberStr.contains(" ")
+                || nameStr.contains(" ") || verb2Str.contains(" "))
+        {
+            Context context = getApplicationContext();
+            CharSequence text = "One of the text boxes contains a space, no spaces are allowed";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
+        else {
+
+            //Note: color change and bold/italics code isn't included because almost apps revert to
+            //normal black and white text, and even undo the bold/italics, it was a waste of space
+
+
+            String strToSend = " There once was a(n) " + objectStr + " named " + nameStr;
+            strToSend += ", it Lived all its life in a(n) ";
+            strToSend += adjectiveStr + " " + placeStr + ". Until one day, ";
+            strToSend += adverbStr + ", " + numberStr + " " + nounStr;
+            strToSend +=  " showed up and took over everything. During the war all ";
+            strToSend += adjective2Str + " " + objectStr + "(e)s were massacred. ";
+            strToSend += nameStr + " started a rebellion. Their army " + verbStr + " ";
+            strToSend += "the " + nounStr +", but that wasn't enough. So " + nameStr;
+            strToSend += " " + verb2Str + " the " + nounStr + " and ended the war.";
+
+
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
+            intent.putExtra(Intent.EXTRA_TEXT, strToSend);
+
+            String chooserTitle = getString(R.string.chooser);
+
+
+            Intent chosenIntent = Intent.createChooser(intent, chooserTitle);
+            startActivity(chosenIntent);
+        }
+    }
+
     //uses html code which is later translated to make the text bold/italics
     //source: https://stackoverflow.com/questions/14371092/how-to-make-a-specific-text-on-textview-bold/14371107
     public String makeBold(String word)

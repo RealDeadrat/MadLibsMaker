@@ -41,7 +41,16 @@ public class MadLibActivity extends AppCompatActivity {
         String coloredName = getColoredSpanned(name, genWordColor);
         String coloredVerb2 = getColoredSpanned(verb2, genWordColor);
 
-        String strToDisplay = " bruh " + coloredNoun + " bruh " + coloredAdverb + " bruh " + coloredAdjective + " bruh " + coloredAdjective2 + " bruh " + coloredPlace + " bruh " + coloredVerb + " bruh " + coloredObject + " bruh " + coloredNumber + " bruh " + coloredName + " bruh " + coloredVerb2 + " bruh " ;
+        String strToDisplay = " There once was a(n) " + coloredObject + " named " + coloredName;
+               strToDisplay += ", it Lived all its life in a(n) ";
+               strToDisplay += coloredAdjective + " " + coloredPlace + ". Until one day, ";
+               strToDisplay += coloredAdverb + ", " + coloredNumber + " " + coloredNoun;
+               strToDisplay +=  " showed up and took over everything. During the war all ";
+               strToDisplay += coloredAdjective2 + " " + coloredObject + "(e)s were massacred. ";
+               strToDisplay += coloredName + " started a rebellion. Their army " + coloredVerb + " ";
+               strToDisplay += "the " + coloredNoun +", but that wasn't enough. So " + coloredName;
+               strToDisplay += " " + coloredVerb2 + " the " + coloredNoun + " and ended the war.";
+
         TextView str = (TextView) findViewById(R.id.madlib);
 
         //the Html class is used to translate the code in the getColoredSpanned method which

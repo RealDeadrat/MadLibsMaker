@@ -9,6 +9,15 @@
 
     <!-- Note: any code found here that isn't taught, was found by exploration within Android Studio
      therefore source isn't necessary-->
+
+    <ImageView
+        android:layout_width="@dimen/logoWidth"
+        android:layout_height="@dimen/logoHeight"
+        android:background="@drawable/madlibslogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/noun"
         android:layout_width="100dp"
@@ -16,7 +25,7 @@
         android:layout_marginTop="@dimen/marginTopEdTxt"
         android:background="@drawable/custom"
         android:gravity="center"
-        android:hint="Noun"
+        android:hint="Noun (Plr)"
         android:textColor="@color/colorText"
         android:textColorHint="@color/colorHntText"
         app:layout_constraintEnd_toEndOf="@+id/leftOrgEdTxt"
@@ -86,7 +95,7 @@
         android:layout_marginTop="@dimen/marginTopEdTxt"
         android:background="@drawable/custom"
         android:gravity="center"
-        android:hint="Verb"
+        android:hint="Verb (Past)"
         android:textColor="@color/colorText"
         android:textColorHint="@color/colorHntText"
         app:layout_constraintEnd_toEndOf="@+id/adjective2"
@@ -100,7 +109,7 @@
         android:layout_marginTop="@dimen/marginTopEdTxt"
         android:background="@drawable/custom"
         android:gravity="center"
-        android:hint="Object"
+        android:hint="Object (Sngl)"
         android:textColor="@color/colorText"
         android:textColorHint="@color/colorHntText"
         app:layout_constraintEnd_toEndOf="@+id/place"
@@ -114,7 +123,7 @@
         android:layout_marginTop="@dimen/marginTopEdTxt"
         android:background="@drawable/custom"
         android:gravity="center"
-        android:hint="Number"
+        android:hint="Number(Plr)"
         android:textColor="@color/colorText"
         android:textColorHint="@color/colorHntText"
         app:layout_constraintEnd_toEndOf="@+id/name"
@@ -142,7 +151,7 @@
         android:layout_marginTop="@dimen/marginTopEdTxt"
         android:background="@drawable/custom"
         android:gravity="center"
-        android:hint="Verb"
+        android:hint="Verb (Past)"
         android:textColor="@color/colorText"
         android:textColorHint="@color/colorHntText"
         app:layout_constraintEnd_toEndOf="@+id/verb"
@@ -183,6 +192,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginBottom="@dimen/btnMarginBtm"/>
+
+    <Button
+        android:layout_width="@dimen/btnWidth2"
+        android:layout_height="@dimen/btnheight2"
+        android:layout_marginBottom="@dimen/btnMarginBtm2"
+        android:background="?attr/actionModeShareDrawable"
+        android:onClick="shareLib"
+        android:textColor="@color/colorText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
