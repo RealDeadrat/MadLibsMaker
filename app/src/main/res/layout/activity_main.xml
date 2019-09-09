@@ -7,6 +7,8 @@
     android:background="@drawable/madlibspattern"
     tools:context=".MainActivity">
 
+    <!-- Note: any code found here that isn't taught, was found by exploration within Android Studio
+     therefore source isn't necessary-->
     <EditText
         android:id="@+id/noun"
         android:layout_width="100dp"

@@ -2,11 +2,13 @@ package com.example.madlibsmaker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,56 +43,86 @@ public class MainActivity extends AppCompatActivity {
         String verb2Str = verb2.getText().toString();
 
 
-        //creates a checkbox object, uses the id given in the activity_main.xml to specify which box
-        //use the isChecked() method to see if box is checked and apply changes accordingly
-        //Source: hhtps://stackoverflow.com/questions/18336151/how-to-check-if-android-checkbox-is-checked-within-its-onclick-method-declared
-        //modified the example with my knowledge to apply here
-        CheckBox checkbox = (CheckBox) findViewById(R.id.boldingBox);
-
-        if(checkbox.isChecked())
+        //here toast pop ups are used to avoid blank mad libs
+        //source: https://developer.android.com/guide/topics/ui/notifiers/toasts
+        if(nounStr.length()==0 || adverbStr.length()==0 || adjectiveStr.length()==0 || adjective2Str.length()==0
+        || placeStr.length()==0 || verbStr.length()==0|| objectStr.length()==0 || numberStr.length()==0 || nameStr.length()==0
+        || verb2Str.length()==0)
         {
-            nounStr = makeBold(nounStr);
-            adverbStr = makeBold(adverbStr);
-            adjectiveStr = makeBold(adjectiveStr);
-            adjective2Str = makeBold(adjective2Str);
-            placeStr = makeBold(placeStr);
-            verbStr = makeBold(verbStr);
-            objectStr = makeBold(objectStr);
-            numberStr = makeBold(numberStr);
-            nameStr = makeBold(nameStr);
-            verb2Str = makeBold(verb2Str);
+            Context context = getApplicationContext();
+            CharSequence text = "One of the text boxes are blank, please fill them in";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
+        else if(nounStr.contains(" ") || adverbStr.contains(" ") || adjectiveStr.contains(" ") || adjective2Str.contains(" ")
+                || placeStr.contains(" ") || verbStr.contains(" ") || objectStr.contains(" ") || numberStr.contains(" ")
+                || nameStr.contains(" ") || verb2Str.contains(" "))
+        {
+            Context context = getApplicationContext();
+            CharSequence text = "One of the text boxes contains a space, no spaces are allowed";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
+        else
+        {
+            //creates a checkbox object, uses the id given in the activity_main.xml to specify which box
+            //use the isChecked() method to see if box is checked and apply changes accordingly
+            //Source: hhtps://stackoverflow.com/questions/18336151/how-to-check-if-android-checkbox-is-checked-within-its-onclick-method-declared
+            //modified the example with my knowledge to apply here
+            CheckBox checkbox = (CheckBox) findViewById(R.id.boldingBox);
+
+            if(checkbox.isChecked())
+            {
+                nounStr = makeBold(nounStr);
+                adverbStr = makeBold(adverbStr);
+                adjectiveStr = makeBold(adjectiveStr);
+                adjective2Str = makeBold(adjective2Str);
+                placeStr = makeBold(placeStr);
+                verbStr = makeBold(verbStr);
+                objectStr = makeBold(objectStr);
+                numberStr = makeBold(numberStr);
+                nameStr = makeBold(nameStr);
+                verb2Str = makeBold(verb2Str);
+            }
+
+            CheckBox checkbox2 = (CheckBox) findViewById(R.id.italicizingBox);
+
+            if(checkbox2.isChecked())
+            {
+                nounStr = makeItalics(nounStr);
+                adverbStr = makeItalics(adverbStr);
+                adjectiveStr = makeItalics(adjectiveStr);
+                adjective2Str = makeItalics(adjective2Str);
+                placeStr = makeItalics(placeStr);
+                verbStr = makeItalics(verbStr);
+                objectStr = makeItalics(objectStr);
+                numberStr = makeItalics(numberStr);
+                nameStr = makeItalics(nameStr);
+                verb2Str = makeItalics(verb2Str);
+            }
+
+            Intent intent = new Intent(this, MadLibActivity.class);
+
+            intent.putExtra(MadLibActivity.NOUN, nounStr);
+            intent.putExtra(MadLibActivity.ADVERB, adverbStr);
+            intent.putExtra(MadLibActivity.ADJECTIVE, adjectiveStr);
+            intent.putExtra(MadLibActivity.ADJECTIVE2, adjective2Str);
+            intent.putExtra(MadLibActivity.PLACE, placeStr);
+            intent.putExtra(MadLibActivity.VERB, verbStr);
+            intent.putExtra(MadLibActivity.OBJECT, objectStr);
+            intent.putExtra(MadLibActivity.NUMBER, numberStr);
+            intent.putExtra(MadLibActivity.NAME, nameStr);
+            intent.putExtra(MadLibActivity.VERB2, verb2Str);
+
+            startActivity(intent);
         }
 
-        CheckBox checkbox2 = (CheckBox) findViewById(R.id.italicizingBox);
 
-        if(checkbox2.isChecked())
-        {
-            nounStr = makeItalics(nounStr);
-            adverbStr = makeItalics(adverbStr);
-            adjectiveStr = makeItalics(adjectiveStr);
-            adjective2Str = makeItalics(adjective2Str);
-            placeStr = makeItalics(placeStr);
-            verbStr = makeItalics(verbStr);
-            objectStr = makeItalics(objectStr);
-            numberStr = makeItalics(numberStr);
-            nameStr = makeItalics(nameStr);
-            verb2Str = makeItalics(verb2Str);
-        }
 
-        Intent intent = new Intent(this, MadLibActivity.class);
-
-        intent.putExtra(MadLibActivity.NOUN, nounStr);
-        intent.putExtra(MadLibActivity.ADVERB, adverbStr);
-        intent.putExtra(MadLibActivity.ADJECTIVE, adjectiveStr);
-        intent.putExtra(MadLibActivity.ADJECTIVE2, adjective2Str);
-        intent.putExtra(MadLibActivity.PLACE, placeStr);
-        intent.putExtra(MadLibActivity.VERB, verbStr);
-        intent.putExtra(MadLibActivity.OBJECT, objectStr);
-        intent.putExtra(MadLibActivity.NUMBER, numberStr);
-        intent.putExtra(MadLibActivity.NAME, nameStr);
-        intent.putExtra(MadLibActivity.VERB2, verb2Str);
-
-        startActivity(intent);
 
     }
 
