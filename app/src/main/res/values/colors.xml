@@ -8,4 +8,5 @@
     <color name="colorText">#7722bbff</color>
     <color name="colorBtnSld" >#55ff2277</color>
     <color name="colorBtnStk" >#8822ff77</color>
+    <color name="colorLibTemplate" >#00ff22</color>
 </resources>

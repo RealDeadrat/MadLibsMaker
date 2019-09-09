@@ -2,6 +2,7 @@ package com.example.madlibsmaker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -37,6 +38,21 @@ public class MainActivity extends AppCompatActivity {
         String numberStr = number.getText().toString();
         String nameStr = name.getText().toString();
         String verb2Str = verb2.getText().toString();
+
+        Intent intent = new Intent(this, MadLibActivity.class);
+
+        intent.putExtra(MadLibActivity.NOUN, nounStr);
+        intent.putExtra(MadLibActivity.ADVERB, adverbStr);
+        intent.putExtra(MadLibActivity.ADJECTIVE, adjectiveStr);
+        intent.putExtra(MadLibActivity.ADJECTIVE2, adjective2Str);
+        intent.putExtra(MadLibActivity.PLACE, placeStr);
+        intent.putExtra(MadLibActivity.VERB, verbStr);
+        intent.putExtra(MadLibActivity.OBJECT, objectStr);
+        intent.putExtra(MadLibActivity.NUMBER, numberStr);
+        intent.putExtra(MadLibActivity.NAME, nameStr);
+        intent.putExtra(MadLibActivity.VERB2, verb2Str);
+
+        startActivity(intent);
 
     }
 }

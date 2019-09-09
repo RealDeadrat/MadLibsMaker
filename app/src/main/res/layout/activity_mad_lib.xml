@@ -4,6 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MadLibActivity">
+    tools:context=".MadLibActivity"
+    android:background="@drawable/madlibspattern">
 
+    <TextView
+        android:id="@+id/madlib"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@color/colorLibTemplate"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
