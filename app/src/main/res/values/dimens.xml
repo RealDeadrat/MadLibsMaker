@@ -6,4 +6,5 @@
     <dimen name="btnMarginBtm" >100dp</dimen>
     <dimen name="btnWidth" >100dp</dimen>
     <dimen name="btnheight" >50dp</dimen>
+    <dimen name="chkMarginBtm" >180dp</dimen>
 </resources>
