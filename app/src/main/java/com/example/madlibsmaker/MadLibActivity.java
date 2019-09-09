@@ -45,11 +45,11 @@ public class MadLibActivity extends AppCompatActivity {
         TextView str = (TextView) findViewById(R.id.madlib);
 
         //the Html class is used to translate the code in the getColoredSpanned method which
-        //changes the color, without translation the words would be added and color wouldn't change
+        //changes the color, without translation the code would be added as more text and color wouldn't change
         str.setText(Html.fromHtml(strToDisplay));
     }
 
-    //This method uses some Html/xml code to change the color of the first String parameter inputted
+    //This method uses some Html code to change the color of the first String parameter inputted
     // to the color that is specified as the second String parameter
     //source: https://riptutorial.com/android/example/19946/single-textview-with-two-different-colors
     public String getColoredSpanned(String text, String color)

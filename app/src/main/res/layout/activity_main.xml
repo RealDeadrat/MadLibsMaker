@@ -148,6 +148,7 @@
         app:layout_constraintTop_toBottomOf="@+id/verb" />
 
     <CheckBox
+        android:id="@+id/boldingBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorBtnSld"
@@ -156,7 +157,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="@dimen/chkMarginBtm"/>
+        android:layout_marginBottom="@dimen/BldMarginBtm"/>
+    <CheckBox
+        android:id="@+id/italicizingBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBtnSld"
+        android:text="Italicize Words"
+        android:textColor="@color/colorText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/ItalMarginBtm"/>
 
     <Button
         android:layout_width="@dimen/btnWidth"
